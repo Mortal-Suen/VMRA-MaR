@@ -6,4 +6,25 @@ Breast cancer remains a leading cause of mortality worldwide and is typically de
 ![Structure_V3](https://github.com/user-attachments/assets/a5082faa-82d1-4783-9755-1b37f3502173)
 
 
-This repository contains the code for the paper "VMRA-MaR: An Asymmetry-Aware Temporal Framework for longitudinal Breast Cancer Risk Prediction". The code will be made publicly available upon acceptance of the paper.
+## Requirements
+
+```
+cd /path/to/VMRAMaR
+pip -r install ./requirements.txt
+```
+
+## Training and evaluation
+
+The checkpoint pretrained on Mirai named **mgh_mammo_MIRAI_Base_May20_2019,mgh_mammo_cancer_MIRAI_Transformer_Jan13_2020mgh_mammo_cancer_MIRAI_Transformer_Jan13_2020** to initialize the VMRA-MaR backbone is available [here](https://www.dropbox.com/scl/fi/xdbvk606omyc9yus8mbze/oncoserve_mirai.0.5.0.tar?rlkey=lkuc9aqejfd6dmbj3t8xieqez&e=1&dl=0).
+
+Grid searches:
+
+```
+python scripts/dispatcher.py --experiment_config_path configs/vmramar_base.json --result_path vmramar_base_sweep.csv
+```
+
+Evaluation:
+
+```
+python scripts/dispatcher.py --experiment_config_path configs/vmramar_full.json --result_path vmramar_full_sweep.csv
+```
