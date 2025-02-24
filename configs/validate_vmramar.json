@@ -1,0 +1,38 @@
+{
+  "search_space": {
+    "model_name": ["vmra_mar"],
+    "img_encoder_snapshot": ["snapshots/mgh_mammo_MIRAI_Base_May20_2019.p"],
+    "callibrator_snapshot": ["snapshots/callibrators/VMRA_MAR_FULL_PRED_RF.callibrator.p"],
+    "prediction_save_path": ["demo/validation_output.csv"],
+    "batch_size": [1],
+    "cuda": [true],
+    "dataset": ["kth_mammo_cancer_survival_all_images"],
+    "metadata_path": ["demo/sample_metadata.csv"],
+    "img_mean": [7047.99],
+    "img_size": [[1664, 2048]],
+    "img_std": [12005.5],
+    "num_workers": [24],
+    "train": [false],
+    "dev": [false],
+    "test": [true],
+    "vmrnn_params": {
+      "depths_downsample": ["2,2,6,2"],
+      "depths_upsample": ["2,2,6,2"],
+      "num_heads": ["8,16,32,64"],
+      "patch_size": [32],
+      "window_size": [64],
+      "embed_dim": [512]
+    },
+    "asymmetry_params": {
+      "use_asymmetry": [true],
+      "latent_h": [52],
+      "latent_w": [64],
+      "use_sad_bias": [true],
+      "use_lat_bn": [true],
+      "lat_dropout": [0.1],
+      "initial_asym_mean": [2000],
+      "initial_asym_std": [300]
+    }
+  },
+  "available_gpus": ["0,1,2,3,4,5,6,7"]
+} 
