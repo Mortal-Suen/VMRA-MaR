@@ -13,3 +13,5 @@ import onconet.models.ensemble
 import onconet.models.cumulative_probability_layer
 import onconet.models.vmrnn
 import onconet.models.vmamba
+import onconet.models.lat
+import onconet.models.sad
