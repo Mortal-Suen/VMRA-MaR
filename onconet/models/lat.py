@@ -28,8 +28,8 @@ class LongitudinalAsymmetryTracker(nn.Module):
         )
         
         # Use same normalization parameters as LocalizedDifModel
-        self.initial_asym_mean = getattr(args, "initial_asym_mean", 8000000)
-        self.initial_asym_std = getattr(args, "initial_asym_std", 1520381)
+        self.initial_asym_mean = getattr(args, "initial_asym_mean", 2000)
+        self.initial_asym_std = getattr(args, "initial_asym_std", 300)
         
         self.use_bn = getattr(args, "use_lat_bn", False)
         if self.use_bn:
