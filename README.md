@@ -5,6 +5,8 @@ Breast cancer remains a leading cause of mortality worldwide and is typically de
 
 ![Alt text](scripts/structure.png)
 
+## Acknowledgments
+We would like to thank the authors of Yala, whose Onconet GitHub code this work is based upon.
 
 ## Requirements
 
