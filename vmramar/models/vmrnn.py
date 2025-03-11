@@ -240,7 +240,7 @@ class UpSample(nn.Module):
         return hidden_states_up, x
 
 
-@RegisterModel("vmra_mar")
+@RegisterModel("vmrnn")
 class VMRNN(nn.Module):
     def __init__(self, embed_dim, depths_downsample, depths_upsample, 
                  feature_resolution: tuple, **kwargs):
